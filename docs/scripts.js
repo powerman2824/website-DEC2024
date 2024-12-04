@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
            // Add flame effect to header in dark mode
            const header = document.querySelector('header');
            if (isDarkMode) {
-               header.style.backgroundImage = "url('https://www.reddit.com/r/gifs/comments/73yoek/flame_art_feiry_lion/')"; // Replace with the URL of your flame animation image
+               header.style.backgroundImage = "url('https://i.gifer.com/5GpM.gif')"; // Replace with the URL of your flame animation image
                header.style.backgroundSize = 'cover';
            } else {
                header.style.backgroundImage = '';

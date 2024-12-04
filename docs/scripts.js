@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
            document.body.classList.add('dark-mode');
            toggleInput.checked = true;
            const header = document.querySelector('header');
-           header.style.backgroundImage = "url('https://www.example.com/flame.gif')"; // Replace with the URL of your flame animation image
+           header.style.backgroundImage = "url('https://i.gifer.com/5GpM.gif')"; // Replace with the URL of your flame animation image
            header.style.backgroundSize = 'cover';
        }
    }

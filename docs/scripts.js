@@ -33,4 +33,15 @@ document.addEventListener('DOMContentLoaded', function () {
            toggleInput.checked = true;
        }
    }
+
+   // Sliding navigation menu for mobile screens
+   const nav = document.querySelector('nav');
+   const navToggle = document.createElement('div');
+   navToggle.classList.add('nav-toggle');
+   navToggle.innerHTML = '&#9776;'; // Hamburger icon
+   document.body.prepend(navToggle);
+
+   navToggle.addEventListener('click', function () {
+       nav.classList.toggle('nav-open');
+   });
 });

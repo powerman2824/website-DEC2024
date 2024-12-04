@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const maxResults = 6;
   const youtubeVideosContainer = document.getElementById('youtube-videos');
 
-  fetch(`https://www.googleapis.com/youtube/v3/search?channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`)
+  fetch(`https://www.youtube.com/channel/channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`)
       .then(response => response.json())
       .then(data => {
           data.items.forEach(item => {

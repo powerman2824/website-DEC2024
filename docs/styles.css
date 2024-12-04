@@ -18,10 +18,7 @@ header {
   color: #fff;
   padding: 20px 0;
   text-align: center;
-}
-
-header.dark-mode {
-  background: #1f1f1f;
+  transition: background 0.4s ease;
 }
 
 header h1 {
@@ -39,6 +36,7 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
+  transition: max-height 0.4s ease;
 }
 
 nav ul li {
@@ -66,6 +64,7 @@ body.dark-mode nav ul li a {
   max-width: 800px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
 }
 
 body.dark-mode .section {
@@ -106,6 +105,7 @@ footer {
   padding: 10px 0;
   text-align: center;
   margin-top: 40px;
+  transition: background 0.4s ease;
 }
 
 body.dark-mode footer {
@@ -170,4 +170,36 @@ input:checked + .slider:before {
 
 body.dark-mode .slider {
   background-color: #444;
+}
+
+/* Mobile Navigation Toggle */
+.nav-toggle {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+nav.nav-open ul {
+  display: block;
+  max-height: 300px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+      max-height: 0;
+      overflow: hidden;
+  }
+  .nav-toggle {
+      display: block;
+  }
+  nav ul li {
+      margin: 10px 0;
+  }
 }

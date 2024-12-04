@@ -18,20 +18,19 @@ document.addEventListener('DOMContentLoaded', function () {
         youtubeVideosContainer.appendChild(iframe);
     });
 
-        // Dark mode toggle functionality
-        const toggleButton = document.createElement('button');
-        toggleButton.textContent = 'Toggle Dark Mode';
-        toggleButton.id = 'dark-mode-toggle';
-        document.body.prepend(toggleButton);
-    
-        toggleButton.addEventListener('click', function () {
-            document.body.classList.toggle('dark-mode');
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            localStorage.setItem('darkMode', isDarkMode);
-        });
-    
-        // Load dark mode preference from localStorage
-        if (localStorage.getItem('darkMode') === 'true') {
-            document.body.classList.add('dark-mode');
-        }
+   // Dark mode toggle functionality
+   const toggleInput = document.getElementById('dark-mode-toggle');
+   if (toggleInput) {
+       toggleInput.addEventListener('change', function () {
+           document.body.classList.toggle('dark-mode');
+           const isDarkMode = document.body.classList.contains('dark-mode');
+           localStorage.setItem('darkMode', isDarkMode);
+       });
+
+       // Load dark mode preference from localStorage
+       if (localStorage.getItem('darkMode') === 'true') {
+           document.body.classList.add('dark-mode');
+           toggleInput.checked = true;
+       }
+   }
 });

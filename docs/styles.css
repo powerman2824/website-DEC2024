@@ -181,7 +181,7 @@ body.dark-mode .slider {
   color: #fff;
   padding: 10px;
   position: absolute;
-  top: 150px;
+  top: 140px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;

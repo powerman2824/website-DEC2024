@@ -17,4 +17,21 @@ document.addEventListener('DOMContentLoaded', function () {
         iframe.allowFullscreen = true;
         youtubeVideosContainer.appendChild(iframe);
     });
+
+        // Dark mode toggle functionality
+        const toggleButton = document.createElement('button');
+        toggleButton.textContent = 'Toggle Dark Mode';
+        toggleButton.id = 'dark-mode-toggle';
+        document.body.prepend(toggleButton);
+    
+        toggleButton.addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+        });
+    
+        // Load dark mode preference from localStorage
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+        }
 });

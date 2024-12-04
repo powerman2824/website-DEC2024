@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>IPv4 Calculator</title>
+</head>
+<body>
+    <div class="header">
+        <h1>IPv4 Subnetting Calulator</h1>
+      </div>
+      <div>
+        <button class="button button1" onclick="classA()">Class A</button>
+        <button class="button button2" onclick="classB()">Class B</button>
+        <button class="button button3" onclick="classC()">Class C</button>
+      </div>
+      <div>
+        <input type="number" maxlength="3" size="3" id="oct1" min="1" max="255">.<input type="number" maxlength="3" size="3" id="oct2" min="1" max="255">.<input type="number" maxlength="3" size="3" id="oct3" min="1" max="255">.<input type="number" maxlength="3" size="3" id="oct4" min="1" max="255">
+      </div>
+      <div>
+        <input type="number" maxlength="3" size="3" id="sub1" min="1" max="255">.<input type="number" maxlength="3" size="3" id="sub2" min="1" max="255">.<input type="number" maxlength="3" size="3" id="sub3" min="1" max="255">.<input type="number" maxlength="3" size="3" id="sub4" min="1" max="255">
+      </div>
+      <div>
+        <p><var id="result3"></var><var id="result1"></var><var id="result"></var><var id="result4"></var></p>
+        <p><var id="result2"></var></p>
+        <p><var id="result2-1"></var></p>
+        <p><var id="result2-2"></var></p>
+        <p><var id="result2-3"></var></p>
+        <button class= "button button4" onclick="getResult()">Calculate</button>
+        <button class= "button button4" onclick="reset()">Reset</button>
+      </div>
+      <script src="./index.js"></script>
+</body>
+</html>

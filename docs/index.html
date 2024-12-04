@@ -1,36 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
-    <title>IPv4 Calculator</title>
+    <title>Joseph Cafarelli - Resume Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-    <div class="header">
-        <h1>IPv4 Subnetting Calulator</h1>
-      </div>
-      <div>
-        <button class="button button1" onclick="classA()">Class A</button>
-        <button class="button button2" onclick="classB()">Class B</button>
-        <button class="button button3" onclick="classC()">Class C</button>
-      </div>
-      <div>
-        <input type="number" maxlength="3" size="3" id="oct1" min="1" max="255">.<input type="number" maxlength="3" size="3" id="oct2" min="1" max="255">.<input type="number" maxlength="3" size="3" id="oct3" min="1" max="255">.<input type="number" maxlength="3" size="3" id="oct4" min="1" max="255">
-      </div>
-      <div>
-        <input type="number" maxlength="3" size="3" id="sub1" min="1" max="255">.<input type="number" maxlength="3" size="3" id="sub2" min="1" max="255">.<input type="number" maxlength="3" size="3" id="sub3" min="1" max="255">.<input type="number" maxlength="3" size="3" id="sub4" min="1" max="255">
-      </div>
-      <div>
-        <p><var id="result3"></var><var id="result1"></var><var id="result"></var><var id="result4"></var></p>
-        <p><var id="result2"></var></p>
-        <p><var id="result2-1"></var></p>
-        <p><var id="result2-2"></var></p>
-        <p><var id="result2-3"></var></p>
-        <button class= "button button4" onclick="getResult()">Calculate</button>
-        <button class= "button button4" onclick="reset()">Reset</button>
-      </div>
-      <script src="./index.js"></script>
+    <header>
+        <div class="container">
+            <h1>Joseph Cafarelli</h1>
+            <p>Lead Carpenter, Construction Engineer Team Leader, IT Professional</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am an accomplished professional with diverse expertise in construction, leadership, and IT, with strong
+                roots in servant leadership principles. I have a passion for team development, safety, and technology.
+                My career highlights include leading engineering teams in the U.S. Army, managing full-scale construction
+                and carpentry projects, and automating IT operations with cloud technologies.</p>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="experience">
+                <h3>Lead Carpenter, GEM Heating & Plumbing</h3>
+                <p><em>February 2023 – October 2024</em></p>
+                <ul>
+                    <li>Led a team in painting, drywall, tiling, and carpentry projects, ensuring high-quality results.</li>
+                    <li>Coordinated with clients to assess needs and deliver effective solutions.</li>
+                    <li>Maintained safety standards and adherence to building codes.</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h3>Construction Engineer Team Leader, U.S. Army</h3>
+                <p><em>May 2010 – August 2013</em></p>
+                <ul>
+                    <li>Led a team of 6 soldiers in security operations during deployment to Bahrain.</li>
+                    <li>Supervised guard shifts and emergency response operations.</li>
+                    <li>Oversaw equipment and facility construction projects in Germany.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Core Competencies</h2>
+            <ul class="skills">
+                <li><strong>Leadership & Team Development:</strong> Ability to lead teams effectively, focusing on
+                    collaboration and results.</li>
+                <li><strong>Technical Skills:</strong> Proficient in Python, Bash, Ansible, and AWS cloud infrastructure.
+                </li>
+                <li><strong>Construction & Maintenance:</strong> Expertise in drywall, carpentry, heavy machinery
+                    operation, and preventive maintenance.</li>
+                <li><strong>Safety & Compliance:</strong> Skilled in safety and environmental management, ensuring
+                    adherence to regulations.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="videos" class="section">
+        <div class="container">
+            <h2>My Videos</h2>
+            <div id="youtube-videos">
+                <!-- YouTube videos will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you would like to get in touch, feel free to send me an email or connect via my social channels:</p>
+            <ul class="contact-info">
+                <li>Email: <a href="mailto:mr.caf2824@gmail.com">mr.caf2824@gmail.com</a></li>
+                <li>Location: Fitchburg, MA</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Joseph Cafarelli. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
+
 </html>

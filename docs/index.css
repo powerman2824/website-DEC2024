@@ -1,70 +1,100 @@
 body {
-    text-align: center;
-    margin-top: 40px;
-    
-  }
-  .header {
-    text-decoration: underline;
-  }
-  .button {
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 50px;
-  }
-  .button1 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #4CAF50;
-  }
-  .button1:hover {
-    background-color: #4CAF50;
-    color: white;
-  }
-  .button2 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #008CBA;
-  }
-  .button2:hover {
-    background-color: #008CBA;
-    color: white;
-  }
-  .button3 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #a04caf;
-  }
-  .button3:hover {
-    background-color: #a04caf;
-    color: white;
-  }
-  .button4 {
-    background-color: black; 
-    color: white; 
-    border: 2px solid #af4c4c;
-  }
-  .button4:hover {
-    background-color: #af4c4c;
-    color: white;
-  }
-  p {
-    font-size: 25px;
-    line-height: 0.2;
-  }
-  var {
-      font-style: normal;
-      font-size: 15px;
-  }
-@media only screen and (min-width: 601px) {
-  var {
-    font-size: 24px;
-  }
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  margin: 5px 0 15px;
+  font-size: 1.2em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #00bcd4;
+}
+
+.section {
+  padding: 40px 20px;
+  background: #fff;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.experience, .skills {
+  margin-bottom: 20px;
+}
+
+.skills li {
+  margin-bottom: 10px;
+}
+
+#youtube-videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+#youtube-videos iframe {
+  width: 300px;
+  height: 200px;
+  border: none;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.contact-info a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
 }

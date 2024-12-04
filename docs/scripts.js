@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   const apiKey = 'YOUR_YOUTUBE_API_KEY'; // Replace with your YouTube API Key
-  const channelId = 'mr.caf2824'; // Replace with your YouTube Channel ID
+  const channelId = 'mrcaf2824'; // Replace with your YouTube Channel ID
   const maxResults = 6;
   const youtubeVideosContainer = document.getElementById('youtube-videos');
 

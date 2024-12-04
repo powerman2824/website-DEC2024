@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // Array of YouTube video IDs from your channel
     const videoIds = [
-        'https://youtube.com/live/n0o0HSmh2G4?feature=share', // Replace with your actual YouTube video ID
-        'https://youtube.com/live/JKpFBlF-Udw?feature=share',
-        'https://youtu.be/jFwI8lepYuE'
+        'n0o0HSmh2G4', // Replace with your actual YouTube video ID
+        'JKpFBlF-Udw',
+        'jFwI8lepYuE'
     ];
 
     videoIds.forEach(videoId => {

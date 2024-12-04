@@ -1,24 +1,20 @@
-// JavaScript to dynamically load YouTube videos from your channel
+// JavaScript to load specific YouTube videos from your channel
 
 document.addEventListener('DOMContentLoaded', function () {
-  const apiKey = 'YOUR_YOUTUBE_API_KEY'; // Replace with your YouTube API Key
-  const channelId = 'UCoMCXr3-FFgrAegjJKgvyHQ'; // Replace with your YouTube Channel ID
-  const maxResults = 6;
-  const youtubeVideosContainer = document.getElementById('youtube-videos');
+    const youtubeVideosContainer = document.getElementById('youtube-videos');
+    
+    // Array of YouTube video IDs from your channel
+    const videoIds = [
+        'https://youtube.com/live/n0o0HSmh2G4?feature=share', // Replace with your actual YouTube video ID
+        'https://youtube.com/live/JKpFBlF-Udw?feature=share',
+        'https://youtu.be/jFwI8lepYuE'
+    ];
 
-  fetch(`https://www.youtube.com/channel/channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`)
-      .then(response => response.json())
-      .then(data => {
-          data.items.forEach(item => {
-              if (item.id.kind === 'youtube#video') {
-                  const videoId = item.id.videoId;
-                  const iframe = document.createElement('iframe');
-                  iframe.src = `https://www.youtube.com/embed/${videoId}`;
-                  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-                  iframe.allowFullscreen = true;
-                  youtubeVideosContainer.appendChild(iframe);
-              }
-          });
-      })
-      .catch(error => console.error('Error fetching YouTube videos:', error));
+    videoIds.forEach(videoId => {
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${videoId}`;
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        youtubeVideosContainer.appendChild(iframe);
+    });
 });

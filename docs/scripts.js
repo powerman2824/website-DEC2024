@@ -25,14 +25,27 @@ document.addEventListener('DOMContentLoaded', function () {
            document.body.classList.toggle('dark-mode');
            const isDarkMode = document.body.classList.contains('dark-mode');
            localStorage.setItem('darkMode', isDarkMode);
+
+           // Add flame effect to header in dark mode
+           const header = document.querySelector('header');
+           if (isDarkMode) {
+               header.style.backgroundImage = "url('https://www.reddit.com/r/gifs/comments/73yoek/flame_art_feiry_lion/')"; // Replace with the URL of your flame animation image
+               header.style.backgroundSize = 'cover';
+           } else {
+               header.style.backgroundImage = '';
+           }
        });
 
        // Load dark mode preference from localStorage
        if (localStorage.getItem('darkMode') === 'true') {
            document.body.classList.add('dark-mode');
            toggleInput.checked = true;
+           const header = document.querySelector('header');
+           header.style.backgroundImage = "url('https://www.example.com/flame.gif')"; // Replace with the URL of your flame animation image
+           header.style.backgroundSize = 'cover';
        }
    }
+
 
    // Sliding navigation menu for mobile screens
    const nav = document.querySelector('nav');

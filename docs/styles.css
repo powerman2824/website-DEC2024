@@ -19,17 +19,11 @@ header {
   padding: 20px 0;
   text-align: center;
   transition: background 0.4s ease;
-  position: relative;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-}
-
-header p {
-  margin: 5px 0 15px;
-  font-size: 1.2em;
+header.dark-mode {
+  background-image: url('https://i.gifer.com/5GpM.gif');
+  background-size: cover;
 }
 
 nav ul {
@@ -37,7 +31,6 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  transition: max-height 0.4s ease;
 }
 
 nav ul li {
@@ -54,50 +47,51 @@ nav ul li a:hover {
   color: #00bcd4;
 }
 
-body.dark-mode nav ul li a {
-  color: #00bcd4;
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  justify-items: center;
 }
 
-.section {
-  padding: 40px 20px;
-  background: #fff;
-  margin: 20px auto;
-  max-width: 800px;
+.gallery img {
+  width: 100%;
+  max-width: 250px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: background 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-body.dark-mode .section {
-  background: #1e1e1e;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+.gallery img:hover {
+  transform: scale(1.05);
 }
 
-.container {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-}
-
-.experience, .skills {
-  margin-bottom: 20px;
-}
-
-.skills li {
-  margin-bottom: 10px;
-}
-
-#youtube-videos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
   justify-content: center;
+  align-items: center;
 }
 
-#youtube-videos iframe {
-  width: 300px;
-  height: 200px;
-  border: none;
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2em;
+  color: #fff;
+  cursor: pointer;
 }
 
 footer {
@@ -122,7 +116,6 @@ body.dark-mode footer {
   text-decoration: underline;
 }
 
-/* Dark Mode Toggle as Slider */
 .dark-mode-toggle {
   position: relative;
   display: inline-block;
@@ -173,7 +166,6 @@ body.dark-mode .slider {
   background-color: #444;
 }
 
-/* Mobile Navigation Toggle */
 .nav-toggle {
   display: none;
   font-size: 2em;
@@ -181,7 +173,7 @@ body.dark-mode .slider {
   color: #fff;
   padding: 10px;
   position: absolute;
-  top: 145px;
+  top: 120px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;

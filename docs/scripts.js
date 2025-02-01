@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Dark mode toggle with music
     const darkModeToggle = document.getElementById('dark-mode-toggle');
-    const audio = new Audio('suno-music.mp3');
+    const audio = new Audio('music/super-metal.mp3');
     
     if (darkModeToggle) {
         darkModeToggle.addEventListener('change', function () {

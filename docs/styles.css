@@ -13,6 +13,11 @@ body.dark-mode {
   color: #e0e0e0;
 }
 
+body.dark-mode header {
+  background-image: url('https://i.gifer.com/5GpM.gif');
+  background-size: cover;
+}
+
 header {
   background: #333;
   color: #fff;
@@ -21,9 +26,14 @@ header {
   transition: background 0.4s ease;
 }
 
-header.dark-mode {
-  background-image: url('https://i.gifer.com/5GpM.gif');
-  background-size: cover;
+nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+nav.nav-open {
+  max-height: 300px;
 }
 
 nav ul {
@@ -65,6 +75,12 @@ nav ul li a:hover {
 
 .gallery img:hover {
   transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .gallery img {
+      max-width: 80%;
+  }
 }
 
 .lightbox {
